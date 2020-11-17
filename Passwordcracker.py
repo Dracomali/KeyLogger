@@ -25,8 +25,10 @@ with open('Datat.txt', 'r') as data:
                 pass
 
             else:
+                # adds words to the list
                 word += str(character)
 
+        # splits words by selected character
         if "Key.shift" in word:
             words.append(word.split("Key.shift"))
 
@@ -35,10 +37,13 @@ with open('Datat.txt', 'r') as data:
 
     data.close()
 
+# Iterates through word list
 for item in words:
     for thing in item:
+
+        # cleans up list and tries to join nested values
         if "space\n" in thing or "Key.space" in thing:
-            del words[item][thing]
+            del words[item]["space\n"]
 
 print(words)
 
