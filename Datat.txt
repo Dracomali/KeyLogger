@@ -1,3 +1,9 @@
-'t''e''s''t'Key.space
-'K'Key.shift'o''o''l'Key.space
-'k''i''d'
+'t''e''s''t''u''b''g'Key.space
+'C'Key.shift'i''i''k'Key.space
+'L'Key.shift'o''o''k'Key.space
+'I'Key.shiftKey.space
+'s''e''e'Key.space
+'!'Key.shiftKey.space
+'a'Key.space
+'c''o''o''l'Key.space
+'t''h''i''n''g'

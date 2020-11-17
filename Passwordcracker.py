@@ -27,13 +27,18 @@ with open('Datat.txt', 'r') as data:
             else:
                 word += str(character)
 
+        if "Key.shift" in word:
+            words.append(word.split("Key.shift"))
 
-        words.append(word.split())
+        else:
+            words.append(word.split("Key."))
 
+    data.close()
 
-    print(words)
+for item in words:
+    for thing in item:
+        if "space\n" in thing or "Key.space" in thing:
+            del words[item][thing]
 
-
-
-
+print(words)
 
