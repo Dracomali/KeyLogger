@@ -13,6 +13,16 @@ def apostro(value):
         return False
 
 
+# removes nesting lists
+def nonest(x):
+    newlist = []
+    for y in x:
+        for z in y:
+             newlist.append(str(z))
+
+    return newlist         
+            
+
 # opens file
 with open('/home/l3phant/PycharmProjects/Ckeylogger/Datat.txt', 'r') as data:
 
@@ -32,15 +42,12 @@ with open('/home/l3phant/PycharmProjects/Ckeylogger/Datat.txt', 'r') as data:
         if "Key.shift" in word:
             words.append(word.split("Key.shift"))
 
-        if "Key.space" in word:
-            words.append(word.split("Key.space"))
+            if "Key.space" in word:
+                words.append(word.split("Key.space"))
 
         else:
             words.append(word.split("Key."))
 
-for thing in words:
-    for item in thing:
-        if "space\n" in item:
-            del item
 
-print(words)
+clnwords = nonest(words)
+print(clnwords)
