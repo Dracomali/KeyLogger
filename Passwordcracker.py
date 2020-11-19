@@ -14,11 +14,11 @@ def apostro(value):
 
 
 # opens file
-with open('Datat.txt', 'r') as data:
+with open('/home/l3phant/PycharmProjects/Ckeylogger/Datat.txt', 'r') as data:
 
     for line in data:
         word = ""
-
+        
         for character in line:
             # skips apostrophes
             if character == '\'':
@@ -32,18 +32,15 @@ with open('Datat.txt', 'r') as data:
         if "Key.shift" in word:
             words.append(word.split("Key.shift"))
 
+        if "Key.space" in word:
+            words.append(word.split("Key.space"))
+
         else:
             words.append(word.split("Key."))
 
-    data.close()
-
-# Iterates through word list
-for item in words:
-    for thing in item:
-
-        # cleans up list and tries to join nested values
-        if "space\n" in thing or "Key.space" in thing:
-            del words[item]["space\n"]
+for thing in words:
+    for item in thing:
+        if "space\n" in item:
+            del item
 
 print(words)
-
