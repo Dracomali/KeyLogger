@@ -2,6 +2,7 @@ import os
 import sys
 
 words = []
+clnwrd = []
 
 
 # checks for apostrophes
@@ -14,15 +15,13 @@ def apostro(value):
 
 
 # removes nesting lists
-def nonest(x):
-    newlist = []
+def nonest(x, newlist):
     for y in x:
         for z in y:
              newlist.append(str(z))
 
-    return newlist         
+    return newlist        
             
-
 # opens file
 with open('/home/l3phant/PycharmProjects/Ckeylogger/Datat.txt', 'r') as data:
 
@@ -49,5 +48,18 @@ with open('/home/l3phant/PycharmProjects/Ckeylogger/Datat.txt', 'r') as data:
             words.append(word.split("Key."))
 
 
-clnwords = nonest(words)
-print(clnwords)
+nonest(words, clnwrd)
+
+for thing in clnwrd:
+    if "space\n" in thing:
+        del clnwrd
+    
+    if "Key.space" in thing:
+        thing.split("Key.space")
+
+    if "Key.shift" in thing:
+        thing.split("Key.shift")
+
+
+
+
