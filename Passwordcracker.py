@@ -49,17 +49,23 @@ with open('/home/l3phant/PycharmProjects/Ckeylogger/Datat.txt', 'r') as data:
 
 
 nonest(words, clnwrd)
+idx = 0
 
 for thing in clnwrd:
     if "space\n" in thing:
-        del clnwrd
+        del clnwrd[idx]
     
     if "Key.space" in thing:
-        thing.split("Key.space")
-
+        clnwrd[idx].split("Key.space")
+         
     if "Key.shift" in thing:
-        thing.split("Key.shift")
+        clnwrd[idx].split("Key.shift")
 
+    if thing == '':
+        del clnwrd[idx]
+    
+    idx += 1
 
+print(clnwrd)
 
 
