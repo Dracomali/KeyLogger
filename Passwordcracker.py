@@ -41,8 +41,8 @@ with open('/home/l3phant/PycharmProjects/Ckeylogger/Datat.txt', 'r') as data:
         if "Key.shift" in word:
             words.append(word.split("Key.shift"))
 
-            if "Key.space" in word:
-                words.append(word.split("Key.space"))
+        if "Key.space" in word:
+            words.append(word.split("Key.space"))
 
         else:
             words.append(word.split("Key."))
@@ -52,16 +52,10 @@ nonest(words, clnwrd)
 idx = 0
 
 for thing in clnwrd:
-    if "space\n" in thing:
+    if "space\n" == thing or "ctrl\n" == thing or "enter\n" == thing or "backspace\n" == thing:
         del clnwrd[idx]
-    
-    if "Key.space" in thing:
-        clnwrd[idx].split("Key.space")
-         
-    if "Key.shift" in thing:
-        clnwrd[idx].split("Key.shift")
 
-    if thing == '':
+    if "\n" == thing or thing == '' or thing == ' ':
         del clnwrd[idx]
     
     idx += 1

