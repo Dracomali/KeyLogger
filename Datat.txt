@@ -1,15 +1,5 @@
 
 'T'Key.shift'e''s''t''i''n''g'Key.space
-'N'Key.shift'e''w'Key.space
-'c''o''d''e'Key.space
-'t''o'Key.space
-'s''e''e'Key.space
-'i''f'Key.space
-'t''h''e''i''s'Key.space
-Key.backspace
-Key.backspace
-Key.backspace
-Key.backspace
-'i''s'Key.space
-'w''o''r''k''s'Key.space
-Key.shift'p''r''o''p''e''r''l''y'
+'C'Key.shift'o''o''l''i''o'Key.space
+'I'Key.shiftKey.space
+'d''u''n''n''o'Key.enter
