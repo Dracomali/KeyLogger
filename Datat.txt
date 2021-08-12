@@ -1,5 +1,1 @@
 
-'T'Key.shift'e''s''t''i''n''g'Key.space
-'C'Key.shift'o''o''l''i''o'Key.space
-'I'Key.shiftKey.space
-'d''u''n''n''o'Key.enter

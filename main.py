@@ -58,4 +58,3 @@ def on_press(key):
 # This also joins the characters
 with keyboard.Listener(on_press=on_press, on_release=write) as listener:
     listener.join()
-    
