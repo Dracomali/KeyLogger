@@ -2,9 +2,11 @@
 
 !!!!!!!!!IMPORTANT PLEASE READ!!!!!!!!
 
-This is going to be a Key logger and a Password Cracker all in one program. Some of the main goal I wish to be able to do is be able to deploy the keylogger secretly so that it isn't detected by any antivirus software. It should also be able to send a word list containing all user data and then destroy itself without causing any harm to the users files or device. In addittion to being a Keylogger, the program will have a feature to operate remotely and be a Password Cracker.
+  I initially stated working on this program because I got interested in cybersecurity and was trying to think of a way to collect unique words for a wordlist that can be used to bruteforce passwords.
+  
+  So far the program is able to record the keystrokes of a user and writes them into a text file. Originally it included special keys such as "Key.space" "Key.enter", but I recently changed it to only include "Key.shift". Each line in the text file contains characters that add up to a single word before keys such as space or enter are hit. Additionally it is important to note that, so far, the program does not take into account special characters or combination inputs.
+  
+  Once the text is recorded to the file, it is "cleaned" so that it becomes easier to manipulate and use the words in the text file. The cleaned data is then added to a different text file which is the word list that can be used for brute force attacks.
 
-For the Password Cracker, the program will ask for baisic the baisic requirements of target website. It will then create a seperate document containing the passwords for future use. This allows for proper organization of the passwords as well.
 
 ***I would like to make sure that it is clear, THIS PROGRAM IS FOR EDUCATIONAL PURPOSES ONLY! Using scripts like these against real people could lead to trouble, so please be careful.
-
