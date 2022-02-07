@@ -1,4 +1,4 @@
-# KeyLogger/Password Cracker
+# KeyLogger/Password Generator
 
 !!!!!!!!!IMPORTANT PLEASE READ!!!!!!!!
 
