@@ -56,3 +56,6 @@ with open(clean_file, 'r+') as file:
 
             if is_new(clean_file, item) == True:
                 file.write(item+"\n")
+
+    
+    

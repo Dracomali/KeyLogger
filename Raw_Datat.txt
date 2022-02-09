@@ -24,3 +24,14 @@ Key.shift't''e''s''t''i''n'
 Key.shift'n'Key.shift'3'Key.shift'W'Key.shift'I'Key.shift'n''p''u''t'
 'C''O''O'Key.shift'l'
 'G'Key.shift'u''e''y'
+'t''e''s''t''i''n''g'
+'a'
+'n''e''w'
+'o''o''p''s'
+
+
+
+'I'Key.shift
+'m''a''d''e'
+'a'
+'m''i''s''t''a''k''e'
