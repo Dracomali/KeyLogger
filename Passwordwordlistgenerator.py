@@ -1,7 +1,6 @@
 import os
 import sys
 
-from pkg_resources import WorkingSet
 
 def clean(file_name):
     """This function cleans up data and writes it into a final wordlist to use"""
@@ -42,20 +41,19 @@ def is_new(file_name, variable):
     return x
 
 # define path files as variables 
-raw_file = "D:\Programming\python\Keylogger-Passwordcracker\Raw_Datat.txt"
-clean_file = "D:\Programming\python\Keylogger-Passwordcracker\clean_data.txt"
+raw_file = "python/Keylogger-PasswordGenerator/Raw_Datat.txt"
+clean_file = "python/Keylogger-PasswordGenerator/clean_data.txt"
 
 #"clean" data from Raw_Data.txt into a neater more manageable wordlist
 cleaned_data = clean(raw_file)
 
 #Opens file to iterate through and write to it if values don't already exist
-with open(clean_file, 'r+') as file:
+with open(clean_file, 'a') as file:
 
-    for line in file:
-        for item in cleaned_data:
+    for item in cleaned_data:
 
-            if is_new(clean_file, item) == True:
-                file.write(item+"\n")
+        if is_new(clean_file, item) == True:
+            file.write(item+"\n")
 
     
     
